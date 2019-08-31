@@ -1,5 +1,3 @@
-# Scraping News Articles
-
 import urllib.request
 import urllib.error
 import re
