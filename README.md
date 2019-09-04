@@ -1,4 +1,4 @@
-# py_ScrapingNewsArticles
+# py_Globalnews_Spider
 
 I'm using Python 3 and Python virtual environments scraping Globalnews.ca to collect data without any framework by following the steps below:
 1. Creating a proxy webserver
