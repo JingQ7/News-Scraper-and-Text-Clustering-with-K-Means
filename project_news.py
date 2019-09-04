@@ -1,6 +1,9 @@
+# Scraping News Articles
+
 import urllib.request
 import urllib.error
 import re
+import time
 
 def get_proxy(url, addr):
     # Create a proxy
@@ -9,11 +12,19 @@ def get_proxy(url, addr):
     # Get a opener
     opener = urllib.request.build_opener(handler, urllib.request.HTTPHandler)
     urllib.request.install_opener(opener)
-    # Get data
+    # Open URLs
     try:
         response = urllib.request.urlopen(url, timeout=10)
     except urllib.error.URLError as e:
+        if hasattr(e, 'code'):
+            print(e.code)
+        if hasattr(e, 'reason'):
+            print(e.reason)
+        time.sleep(10)
+    except Exception as e:
         print('Error' + str(e))
+        time.sleep(5)
+    # Get data
     data = response.read().decode('utf-8', 'ignore')
     return data
 
@@ -27,13 +38,13 @@ data = get_proxy(myurl, myaddr)
 
 each_news = '<a href="(https://globalnews.ca/news/.*?")'
 all_news = re.compile(each_news).findall(data)
-print(all_news)
+#print(all_news)
 
 for i in range(0, len(all_news)):
     try:
         print('This is the ' + str(i) + 'th news')
         each = all_news[i]
-        path = '/Users/jingjing/Documents/Python_file/spider/project_news/' + str(i) + '.html'
+        path = '/Users/jingjing/Documents/Python_file/spider/projects/news_html/' + str(i) + '.html'
         urllib.request.urlretrieve(each, path)
         print('Finished')
     except urllib.error.URLError as e:
@@ -41,5 +52,8 @@ for i in range(0, len(all_news)):
             print(e.code)
         if hasattr(e, 'reason'):
             print(e.reason)
+        time.sleep(10)
+    except Exception as e:
+        print('Error' + str(e))
+        time.sleep(5)
 
-print(len(all_news))
