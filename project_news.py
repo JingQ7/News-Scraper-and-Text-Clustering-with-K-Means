@@ -57,3 +57,15 @@ for i in range(0, len(all_news)):
         print('Error' + str(e))
         time.sleep(5)
 
+for i in range(0, len(all_news)):
+    try:
+        each = all_news[i]
+        data2 = get_proxy(each, myaddr)
+        para_key = '<p>(.*?)</p>'
+        para = re.compile(para_key).findall(data2)
+        #print(para)
+        with open('/Users/jingjing/Documents/Python_file/DS/projects/news/news.csv', 'w') as file:
+            file.write(str(para[2:-1]))
+            file.close()
+    except Exception as e:
+        print(e)
