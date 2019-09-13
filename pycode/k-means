@@ -1,0 +1,18 @@
+import numpy
+import pandas
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.cluster import KMeans
+from matplotlib import pylab
+
+file = pandas.read_csv('/Users/jingjing/Documents/Python_file/DS/projects/news/news.csv')
+data = numpy.array([])
+for col in file.columns:
+    data = numpy.append(data, col)
+
+t = TfidfVectorizer(use_idf=True)
+tfid = t.fit_transform(data)
+
+kms = KMeans(n_clusters=4, max_iter=100)
+y = kms.fit_predict(tfid)
+print(y)
+
