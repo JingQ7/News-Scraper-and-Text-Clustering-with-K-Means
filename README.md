@@ -1,4 +1,4 @@
-# py_NewsSpider and Text Clustering with K-means
+# NewsSpider and Text Clustering with K-means
 
 Ability to scraping Globalnews.ca to collect data, and clustering news stories with K-Means model.
 
