@@ -1,6 +1,6 @@
 # NewsSpider and Text Clustering with K-means
 
-Ability to scraping Globalnews.ca to collect data, and clustering news stories with K-Means model.
+Ability to scraping <link>https://globalnews.ca/toronto/</link> to collect data, and clustering news stories with K-Means model.
 
 ## Set up
 Python virtual environments</br>
