@@ -1,4 +1,4 @@
-# News Scraper and Text Clustering with K-means
+# News Scraper and Text Clustering with K-Means
 
 Ability to scraping <link>https://globalnews.ca/toronto/</link> to collect data, and clustering news stories with K-Means model.
 
