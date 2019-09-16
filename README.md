@@ -3,7 +3,7 @@
 Ability to scraping Globalnews.ca to collect data, and clustering news stories with K-Means model.
 
 ## Set up
-Python virtual environments
+Python virtual environments</br>
 Install scikit-learn, numpy, pandas and other dependencies from requirement.txt file
 
 ## GlobalNews Spider
