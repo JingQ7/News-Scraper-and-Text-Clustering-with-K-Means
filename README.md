@@ -3,8 +3,8 @@
 Ability to scraping <link>https://globalnews.ca/toronto/</link> to collect data, and clustering news stories with K-Means model.
 
 ## Set up
-Python virtual environments</br>
-Install scikit-learn, numpy, pandas and other dependencies from requirement.txt file
+Install virtual environments</br>
+Install Scikit-learn, NumPy, Pandas and other dependencies from requirement.txt file
 
 ## GlobalNews Spider
 1. Creating a proxy webserver
