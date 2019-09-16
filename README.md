@@ -14,6 +14,9 @@ Install Scikit-learn, NumPy, Pandas and other dependencies from requirement.txt 
 5. Save each news.html files separately
 6. Save news stories in a csv file
 
+## Data Pre-processing
+Creating a dataframe from Pandas series, and transform into NumPy array
+
 ## K-means clustering with TF-IDF weights
 Use scikit-learn implementation of TF-IDF and K-means, build K-Means model with k = 4 for clustering strings
 
